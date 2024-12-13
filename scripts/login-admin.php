@@ -5,7 +5,7 @@
     }
 
     require_once("db-info.php");
-    include '../head.php';
+    include '../components/head.php';
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $admin_user = $_POST['admin_user'];
