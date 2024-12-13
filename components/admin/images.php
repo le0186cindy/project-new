@@ -60,10 +60,10 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <form method="post">
                     <?php
                     foreach ($images as $image) {
                     ?>
+                        <form method="post">
                         <tr>
                             <th scope="row"><?php echo $image['image_id']?></th>
                             <td><img class="object-fit-contain" style="max-width: 10vw;, max-height: 10vh;" src="<?php echo $image['image_url']?>"></td>
@@ -90,11 +90,11 @@
                             <input hidden name="imageID" value="<?php echo $image['image_id'];?>">
                             <td><button type="submit" class="btn btn-primary" name="actionType" value="edit">Edit</button><button type="submit" class="btn btn-danger" name="actionType" value="delete">Delete</button></td>
                         </tr>
+                        </form>
                     <?php
                     }
                     ?>
                     </tr>
-                    </form>
                 </tbody>
             </table>
         </div>
