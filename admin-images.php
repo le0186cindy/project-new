@@ -1,4 +1,3 @@
-<html lang="en">
 <?php
     if (session_status() === PHP_SESSION_NONE) {
         session_start();
@@ -7,6 +6,9 @@
         header("Location: scripts/login-admin.php");
         exit();
     }
+?>
+<html lang="en">
+<?php
     $title = "Admin Dashboard";
     include 'components/head.php';
 ?>
