@@ -1,9 +1,11 @@
-<html lang="en">
 <?php
     if (!isset($_SESSION['admin_user'])) {
         header("Location: scripts/login-admin.php");
         exit();
     }
+?>
+<html lang="en">
+<?php
     $title = "Admin Dashboard";
     include 'components/head.php';
 ?>
