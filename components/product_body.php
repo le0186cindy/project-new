@@ -38,7 +38,7 @@
                     <label for="quantity" class="form-label">Quantity</label>
                     <div class="input-group">
                         <button class="btn btn-outline-secondary" type="button" id="button-addon1">-</button>
-                        <input type="number"style="width: 3rem;" id="quantity" class="form-control flex-grow-0" placeholder="1" max="50">
+                        <input type="number"style="width: 5rem;" id="quantity" class="form-control flex-grow-0" placeholder="1" max="50">
                         <button class="btn btn-outline-secondary" type="button" id="button-addon2">+</button>
                     </div>
                     <p class="my-2">Price: $<?php echo $product['product_price']?></p>
