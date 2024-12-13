@@ -1,5 +1,7 @@
 <?php
-    session_start();
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
 
     // Initialize the cart if it doesn't exist
     if (!isset($_SESSION['cart'])) {

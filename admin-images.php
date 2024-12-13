@@ -1,6 +1,8 @@
 <html lang="en">
 <?php
-    session_start();
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
     if (!isset($_SESSION['admin_user'])) {
         header("Location: scripts/login-admin.php");
         exit();
