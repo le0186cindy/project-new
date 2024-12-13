@@ -15,7 +15,6 @@
         $admin_user = $_POST['admin_user'];
         $admin_password = $_POST['admin_password'];
 
-        // Database here
         $conn = get_db_connection();
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
@@ -29,7 +28,7 @@
         if ($userID && password_verify($admin_password, $passwordHash)) {
             $_SESSION['admin_user'] = $userID;
 
-            echo "<script type='text/javascript'>window.location.href = '../admin.php</script>";
+            echo "<script type='text/javascript'>window.location.href = '../admin.php';</script>";
             exit();
         }
         $conn->close();
