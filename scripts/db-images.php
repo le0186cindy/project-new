@@ -72,8 +72,8 @@
         $conn = get_db_connection();
         try {
             $conn = get_db_connection();
-            $stmt = $conn->prepare("UPDATE product_images SET image_url = ?, product_id = ?, is_primary = ? WHERE image_id = ?");
-            $stmt->bind_param("ssss", $imageLink, $productID, $primary, $imageID);
+            $stmt = $conn->prepare("UPDATE product_images SET image_url = ?, is_primary = ?, product_id = ? WHERE image_id = ?");
+            $stmt->bind_param("ssss", $imageLink, $primary, $productID, $imageID);
             $stmt->execute();
             $conn->close();
             return true;
