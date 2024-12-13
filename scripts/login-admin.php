@@ -1,12 +1,10 @@
 <?php
-    session_start();
-
     if (isset($_SESSION['admin_user'])) {
         header("Location: ../admin.php");
         exit();
     }
 
-    require("db-info.php");
+    require_once("db-info.php");
     include '../head.php';
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
