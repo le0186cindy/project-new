@@ -1,0 +1,44 @@
+body {
+    background-color: #FFFDD1;
+}
+html {
+    font-family: "Roboto", sans-serif;
+}
+
+#main-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.3s, filter 0.3s; /* Smooth hover effect */
+}
+
+.hover-effect:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Sub-image thumbnails */
+.glide__sub-track {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.sub-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sub-image:hover {
+    transform: scale(1.1);
+}
+
+/* Optional styling for the glide container */
+.glide {
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+}

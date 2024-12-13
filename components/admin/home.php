@@ -1,0 +1,1 @@
+<h1>This page shows Chart.js things</h1>
