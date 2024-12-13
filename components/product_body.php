@@ -69,4 +69,22 @@
         console.log(index);
         glide.go(index); 
     }
+    
+    const decrementButton = document.getElementById("button-addon1");
+    const incrementButton = document.getElementById("button-addon2");
+    const quantityInput = document.getElementById("quantity");
+
+    decrementButton.addEventListener("click", function() {
+        let currentValue = parseInt(quantityInput.value);
+        if (currentValue > 1) {  // Prevent going below 1
+            quantityInput.value = currentValue - 1;
+        }
+    });
+
+    incrementButton.addEventListener("click", function() {
+        let currentValue = parseInt(quantityInput.value);
+        if (currentValue < 50) {  // Prevent going above max value of 50
+            quantityInput.value = currentValue + 1;
+        }
+    });
 </script>
