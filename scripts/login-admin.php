@@ -5,6 +5,7 @@
     }
 
     require_once("db-info.php");
+    $title = "Admin Login"
     include '../components/head.php';
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -25,7 +26,7 @@
         if ($userID && password_verify($admin_password, $passwordHash)) {
             $_SESSION['admin_user'] = $userID;
 
-            header("Location: ../admin.php");
+            echo "<script type='text/javascript'>window.location.href = '../admin.php</script>";
             exit();
         }
         $conn->close();
