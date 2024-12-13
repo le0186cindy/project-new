@@ -5,7 +5,7 @@
     }
 
     require_once("db-info.php");
-    $title = "Admin Login"
+    $title = "Admin Login";
     include '../components/head.php';
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
